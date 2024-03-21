@@ -1,0 +1,35 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+</head>
+<body>
+{% block body %}
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      First HALF page
+        <div>
+    <form method ="post" action="{% url 'randomlogic' %}">
+        {% csrf_token %}
+        <label>Enter The Length of OTP :</label>
+        <input type ="text" name="anusha" required>
+        <button type ="submit">Submit</button>
+    </form>
+    </div>
+    </div>
+    <div class="col order-5">
+      Second HALF Page
+        <br>
+        {{ran1}}
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
+</body>
+</html>
